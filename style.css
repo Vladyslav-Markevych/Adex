@@ -1,0 +1,23 @@
+.small-text {
+  font-size: 12px;
+}
+
+.completed {
+  background-color: blueviolet;
+}
+
+.backimg {
+  background-image: url(./images/main/bg-brand.png);
+  background-repeat: no-repeat;
+}
+
+.backimg-circle {
+  background-image: url(./images/main/circles.png);
+  height: 185px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-heigh {
+  height: 24px;
+}
