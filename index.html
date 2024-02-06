@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Adex</title>
+  </head>
+  <body class="bg-dark text-white">
+    <header>
+      <div class="container pt-5 pb-3">
+        <div class="row d-flex align-items-center">
+          <div class="col-2">
+            <img src="./images/logo.png" alt="logo" />
+          </div>
+          <div class="col-4">
+            <ul class="list-inline m-2">
+              <li class="list-inline-item">Home</li>
+              <li class="list-inline-item">About</li>
+              <li class="list-inline-item">Invest</li>
+              <li class="list-inline-item">Reviews</li>
+              <li class="list-inline-item">Contacts</li>
+              <li class="list-inline-item">
+                <img src="./images/menu.png" alt="menu" />
+              </li>
+            </ul>
+          </div>
+          <div class="col-2">
+            <img src="/images/ico/twitter.png" alt="twitter" />
+            <img src="/images/ico/facebook.png" alt="facebook" />
+            <img src="/images/ico/youtube.png" alt="youtube" />
+            <img src="/images/ico/telegram.png" alt="telegram" />
+          </div>
+          <div class="col-2 d-flex">
+            <img src="/images/english.png" alt="english" />
+            <p class="m-2">English</p>
+          </div>
+          <div class="col-2 d-flex">
+            <button
+              type="button"
+              class="btn btn-primary"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+            >
+              Dashboard
+            </button>
+            <!-- Modal -->
+            <div
+              class="modal fade text-dark"
+              id="exampleModal"
+              tabindex="-1"
+              aria-labelledby="exampleModalLabel"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                      Modal title
+                    </h1>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">...</div>
+                  <div class="modal-footer">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button type="button" class="btn btn-primary">
+                      Save changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              class="btn btn-outline-light mx-2"
+              id="liveToastBtn"
+            >
+              Logout
+            </button>
+            <!-- toasts -->
+            <div class="toast-container position-fixed bottom-0 end-0 p-3">
+              <div
+                id="liveToast"
+                class="toast"
+                role="alert"
+                aria-live="assertive"
+                aria-atomic="true"
+              >
+                <div class="toast-header">
+                  <img src="..." class="rounded me-2" alt="..." />
+                  <strong class="me-auto">Bootstrap</strong>
+                  <small>11 mins ago</small>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="toast"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="toast-body">
+                  Hello, world! This is a toast message.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav class="bg-primary bg-gradient">
+      <div class="container">
+        <div class="row mt-3 p-3">
+          <div class="col-12 d-flex justify-content-between align-items-center">
+            <!-- tooltip -->
+            <div
+              type="button"
+              class="d-inline"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              data-bs-custom-class="custom-tooltip"
+              data-bs-title="This top tooltip is themed via CSS variables."
+            >
+              <img class="d-inline" src="./images/nav/home.png" alt="home" />
+              <p class="d-inline mx-2">Dashboard</p>
+            </div>
+            <div
+              class="d-inline border border-secondary rounded-pill bg-dark p-2"
+            >
+              <img
+                class="d-inline"
+                src="./images/nav/deposits.png"
+                alt="deposits"
+              />
+              <p class="d-inline mx-2">deposits</p>
+            </div>
+            <div class="d-inline">
+              <img
+                class="d-inline"
+                src="./images/nav/transactions.png"
+                alt="transactions"
+              />
+              <p class="d-inline mx-2">transactions</p>
+            </div>
+            <div class="d-inline">
+              <img
+                class="d-inline"
+                src="./images/nav/withdraw.png"
+                alt="withdraw"
+              />
+              <p class="d-inline mx-2">withdraw</p>
+            </div>
+            <div class="d-inline">
+              <img
+                class="d-inline"
+                src="./images/nav/partners.png"
+                alt="partners"
+              />
+              <p class="d-inline mx-2">partners</p>
+            </div>
+            <div class="d-inline">
+              <img class="d-inline" src="./images/nav/up.png" alt="up" />
+              <p class="d-inline mx-2">Top up</p>
+            </div>
+            <div class="d-inline">
+              <img
+                class="d-inline"
+                src="./images/nav/settings.png"
+                alt="settings"
+              />
+              <p class="d-inline mx-2">settings</p>
+            </div>
+            <div class="d-inline mx-5">
+              <img class="d-inline" src="./images/nav/bell.png" alt="bell" />
+            </div>
+            <div class="d-inline">
+              <button class="btn btn-light d-flex align-items-center">
+                <img class="mx-2" src="./images/nav/add.png" alt="add" />New
+                deposit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="container">
+      <div class="row mt-5">
+        <div class="col-8">
+          <div class="d-flex">
+            <img src="/images/main/my.png" alt="line" />
+            <div class="mx-2">
+              <h1 class="pb-2">My deposits</h1>
+              <p class="text-white-50">
+                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+                amet sint.
+              </p>
+            </div>
+          </div>
+          <!-- dropdown -->
+          <div class="d-flex">
+            <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+              <div class="container-fluid">
+                <p class="mt-3 text-white-50">Filter by:</p>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarNavDarkDropdown"
+                  aria-controls="navbarNavDarkDropdown"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarNavDarkDropdown"
+                >
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                      <button
+                        class="btn btn-dark dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        Start date
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">First</a></li>
+                        <li><a class="dropdown-item" href="#">Second</a></li>
+                        <li><a class="dropdown-item" href="#">Third</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="navbar navbar-expand-lg navbar-dark bg-dark mx-3">
+              <div class="container-fluid">
+                <p class="mt-3 text-white-50">Sort by currency:</p>
+                <button
+                  class="navbar-toggler"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#navbarNavDarkDropdown"
+                  aria-controls="navbarNavDarkDropdown"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div
+                  class="collapse navbar-collapse"
+                  id="navbarNavDarkDropdown"
+                >
+                  <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                      <button
+                        class="btn btn-dark dropdown-toggle"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                        USD
+                      </button>
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">First</a></li>
+                        <li><a class="dropdown-item" href="#">Second</a></li>
+                        <li><a class="dropdown-item" href="#">Third</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex justify-content-between align-items-center p-3 border border-primary-subtle rounded-pill"
+          >
+            <a href="">Deposit</a>
+            <div class="d-flex align-items-center">
+              <p class="mx-4 mt-3">Status</p>
+              <p class="mx-4 mt-3">Invested</p>
+              <p class="mx-4 mt-3">Total profit</p>
+              <p class="mx-4 mt-3">Re-invest</p>
+            </div>
+          </div>
+          <div class="border border-primary-subtle rounded mt-3">
+            <div class="px-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-end">
+                  <p class="fs-2 text-primary">2.4%</p>
+                  <p class="px-2">daily for 30 days</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-primary rounded-pill">Active</button>
+                  <p class="mt-3 mx-4 text-primary-emphasis">USD</p>
+                  <p class="mt-3 mx-4 text-info">+1.000</p>
+                  <p class="mt-3 mx-4">+10.000.000</p>
+                  <!-- checkbox -->
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexCheckDefault">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between p-1 px-4">
+              <!-- progress -->
+              <div style="width: 200px">
+                <div
+                  class="progress"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="d-flex">
+                <p class="small-text px-5">
+                  Start:<span class="text-white-50 mx-1"
+                    >10 June 2021 13:00:49 p.m.</span
+                  >
+                </p>
+                <p class="small-text">
+                  End:<span class="text-white-50 mx-1"
+                    >30 August 2021 13:00:49 p.m.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-primary-subtle rounded mt-3">
+            <div class="px-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-end">
+                  <p class="fs-2 text-primary">2.4%</p>
+                  <p class="px-2">daily for 30 days</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-primary rounded-pill">Active</button>
+                  <p class="mt-3 mx-4 text-primary-emphasis">USD</p>
+                  <p class="mt-3 mx-4 text-info">+1.000</p>
+                  <p class="mt-3 mx-4">+10.000.000</p>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexCheckDefault">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between p-1 px-4">
+              <!-- progress -->
+              <div style="width: 200px">
+                <div
+                  class="progress"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar" style="width: 75%"></div>
+                </div>
+              </div>
+              <div class="d-flex">
+                <p class="small-text px-5">
+                  Start:<span class="text-white-50 mx-1"
+                    >10 June 2021 13:00:49 p.m.</span
+                  >
+                </p>
+                <p class="small-text">
+                  End:<span class="text-white-50 mx-1"
+                    >30 August 2021 13:00:49 p.m.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="border border-primary-subtle rounded mt-3">
+            <div class="px-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-end">
+                  <p class="fs-2 text-primary">2.4%</p>
+                  <p class="px-2">daily for 30 days</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-primary rounded-pill completed">
+                    Completed
+                  </button>
+                  <p class="mt-3 mx-4 text-primary-emphasis">USD</p>
+                  <p class="mt-3 mx-4 text-info">+1.000</p>
+                  <p class="mt-3 mx-4">+10.000.000</p>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexCheckDefault">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between p-1 px-4">
+              <!-- progress -->
+              <div style="width: 200px">
+                <div
+                  class="progress"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="100"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar" style="width: 100%"></div>
+                </div>
+              </div>
+              <div class="d-flex">
+                <p class="small-text px-5">
+                  Start:<span class="text-white-50 mx-1"
+                    >10 June 2021 13:00:49 p.m.</span
+                  >
+                </p>
+                <p class="small-text">
+                  End:<span class="text-white-50 mx-1"
+                    >30 August 2021 13:00:49 p.m.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-primary-subtle rounded mt-3">
+            <div class="px-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-end">
+                  <p class="fs-2 text-primary">2.4%</p>
+                  <p class="px-2">daily for 30 days</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-primary rounded-pill completed">
+                    Completed
+                  </button>
+                  <p class="mt-3 mx-4 text-primary-emphasis">USD</p>
+                  <p class="mt-3 mx-4 text-info">+1.000</p>
+                  <p class="mt-3 mx-4">+10.000.000</p>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexCheckDefault">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between p-1 px-4">
+              <!-- progress -->
+              <div style="width: 200px">
+                <div
+                  class="progress"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="100"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar" style="width: 100%"></div>
+                </div>
+              </div>
+              <div class="d-flex">
+                <p class="small-text px-5">
+                  Start:<span class="text-white-50 mx-1"
+                    >10 June 2021 13:00:49 p.m.</span
+                  >
+                </p>
+                <p class="small-text">
+                  End:<span class="text-white-50 mx-1"
+                    >30 August 2021 13:00:49 p.m.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="border border-primary-subtle rounded mt-3">
+            <div class="px-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-end">
+                  <p class="fs-2 text-primary">2.4%</p>
+                  <p class="px-2">daily for 30 days</p>
+                </div>
+                <div class="d-flex align-items-center">
+                  <button class="btn btn-primary rounded-pill completed">
+                    Completed
+                  </button>
+                  <p class="mt-3 mx-4 text-primary-emphasis">USD</p>
+                  <p class="mt-3 mx-4 text-info">+1.000</p>
+                  <p class="mt-3 mx-4">+10.000.000</p>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="flexCheckDefault"
+                    />
+                    <label class="form-check-label" for="flexCheckDefault">
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between p-1 px-4">
+              <!-- progress -->
+              <div style="width: 200px">
+                <div
+                  class="progress"
+                  role="progressbar"
+                  aria-label="Basic example"
+                  aria-valuenow="100"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div class="progress-bar" style="width: 100%"></div>
+                </div>
+              </div>
+              <div class="d-flex">
+                <p class="small-text px-5">
+                  Start:<span class="text-white-50 mx-1"
+                    >10 June 2021 13:00:49 p.m.</span
+                  >
+                </p>
+                <p class="small-text">
+                  End:<span class="text-white-50 mx-1"
+                    >30 August 2021 13:00:49 p.m.</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-flex align-items-center mt-5">
+            <img src="./images/main/vector-left.png" alt="left" />
+            <p class="m-0 mx-3 text-white-50">1</p>
+            <p class="m-0 mx-3 text-white-50">2</p>
+            <p class="m-0 mx-3 text-white-50">3</p>
+            <img src="./images/main/vector-right.png" alt="right" />
+          </div>
+        </div>
+        <div class="col-4 backimg d-flex flex-column p-5">
+          <div class="">
+            <p class="fs-1 m-0">Info</p>
+            <p>of deposits</p>
+          </div>
+          <div
+            class="d-flex justify-content-between align-items-center backimg-circle mt-5"
+          >
+            <img class="img-heigh" src="./images/main/left.png" alt="left" />
+            <p class="fs-3">USD</p>
+            <img class="img-heigh" src="./images/main/right.png" alt="right" />
+          </div>
+
+          <div
+            class="d-flex flex-column mt-5 border border-primary rounded bg-primary bg-gradient p-2"
+          >
+            <div class="d-flex justify-content-between">
+              <p>Total earned</p>
+              <p>10000</p>
+            </div>
+            <img src="./images/main/line.png" alt="line" />
+            <div class="d-flex justify-content-between mt-2">
+              <p class="m-0">Deposited</p>
+              <p class="m-0">17.000</p>
+            </div>
+          </div>
+          <p class="mt-5">Velit officia consequat duis enim velit mollit.</p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-5 bg-dark bg-gradient text-dark">
+      <div class="container-fluid d-flex justify-content-between mt-3">
+        <img src="./images/footer/1.png" alt="" />
+        <img src="./images/footer/2.png" alt="" />
+        <img src="./images/footer/3.png" alt="" />
+        <img src="./images/footer/4.png" alt="" />
+        <img src="./images/footer/5.png" alt="" />
+        <img src="./images/footer/6.png" alt="" />
+        <img src="./images/footer/7.png" alt="" />
+        <img src="./images/footer/8.png" alt="" />
+        <img src="./images/footer/9.png" alt="" />
+        <img src="./images/footer/10.png" alt="" />
+        <img src="./images/footer/11.png" alt="" />
+        <img src="./images/footer/12.png" alt="" />
+      </div>
+
+      <div class="container mt-5">
+        <div class="d-flex justify-content-between">
+          <div>
+            <img class="" src="./images/logo.png" alt="logo" />
+          </div>
+          <div>
+            <p class="text-primary">Check our company ></p>
+            <p>4517 Washington Ave. Manchester, Kentucky 39495</p>
+          </div>
+          <div class="d-flex">
+            <ul>
+              <li class="list-group-item">Home</li>
+              <li class="list-group-item">Investment</li>
+              <li class="list-group-item">FAQ</li>
+            </ul>
+            <ul>
+              <li class="list-group-item">Reviews</li>
+              <li class="list-group-item">About</li>
+              <li class="list-group-item">Contacts</li>
+            </ul>
+          </div>
+          <div>
+            <!-- popover -->
+            <button
+              class="btn btn-outline-primary"
+              data-bs-container="body"
+              data-bs-toggle="popover"
+              data-bs-placement="top"
+              data-bs-content="Top popover"
+            >
+              Start Investment
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container d-flex justify-content-between mt-4 text-light">
+        <div>
+          <p>© 2021 Adex Capital Limited. All rights are reserved.</p>
+        </div>
+        <div class="d-inline">
+          <img src="/images/ico/twitter.png" alt="twitter" />
+          <img src="/images/ico/facebook.png" alt="facebook" />
+          <img src="/images/ico/youtube.png" alt="youtube" />
+          <img src="/images/ico/telegram.png" alt="telegram" />
+        </div>
+        <div class="d-flex">
+          <p class="mx-2">Terms & Conditions</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const toastTrigger = document.getElementById("liveToastBtn");
+      const toastLiveExample = document.getElementById("liveToast");
+
+      if (toastTrigger) {
+        const toastBootstrap =
+          bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+        toastTrigger.addEventListener("click", () => {
+          toastBootstrap.show();
+        });
+      }
+    </script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+    <script>
+      const popoverTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="popover"]'
+      );
+      const popoverList = [...popoverTriggerList].map(
+        (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+      );
+    </script>
+  </body>
+</html>
